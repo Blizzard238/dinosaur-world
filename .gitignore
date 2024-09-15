@@ -1,0 +1,19 @@
+# IDE/editor-specific files
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+*.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
