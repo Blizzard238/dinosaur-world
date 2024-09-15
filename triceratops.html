@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triceratops</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8eaf6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+        .dino-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+        .dino-table th, .dino-table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+        .dino-table th {
+            background-color: #3949ab;
+            color: white;
+        }
+        .dino-table td {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .download-section a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3949ab;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .download-section a:hover {
+            background-color: #5c6bc0;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 20px 0;
+            padding-left: 40px;
+            text-align: left;
+        }
+        ol {
+            margin: 20px 0;
+            padding-left: 40px;
+            text-align: left;
+        }
+        footer {
+            background-color: #3949ab;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3949ab;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        #scrollToTopBtn:hover {
+            background-color: #5c6bc0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Triceratops</h1>
+        <p>The Triceratops is one of the most iconic dinosaurs, easily recognizable by its three facial horns and large bony frill. This herbivorous dinosaur lived during the late Cretaceous period, around 68 to 66 million years ago, in what is now North America. The name "Triceratops" means "three-horned face," referring to the two large horns above its eyes and the smaller horn on its nose.</p>
+
+        <img src="images/Triceratops.jpg" alt="Triceratops">
+
+        <p>Triceratops was one of the last known non-avian dinosaurs before the mass extinction event. It had a large, sturdy body, measuring up to 30 feet in length and weighing between 6 to 12 tons. Despite its size and formidable appearance, Triceratops was a plant-eater, using its beak-like mouth to clip off vegetation.</p>
+
+        <p>Here are some key facts about Triceratops:</p>
+        <ul>
+            <li><strong>Length:</strong> Approximately 30 feet (9 meters)</li>
+            <li><strong>Height:</strong> About 10 feet (3 meters) at the hips</li>
+            <li><strong>Weight:</strong> Up to 12 tons (10,886 kilograms)</li>
+            <li><strong>Diet:</strong> Herbivorous, feeding on plants like ferns, cycads, and palms</li>
+            <li><strong>Location:</strong> Fossils found in North America, particularly in the western United States</li>
+        </ul>
+
+        <h2>Behavior and Habitat</h2>
+        <p>Triceratops lived in herds and likely used its horns and frill for defense against predators like Tyrannosaurus Rex, as well as for display and possibly combat with other Triceratops. The frill was a large bony shield that protected its neck, and it may have also played a role in thermoregulation.</p>
+
+        <ol>
+            <li>Strong jaws: Triceratops had a beak-like mouth and rows of shearing teeth, ideal for cutting through tough plant material.</li>
+            <li>Social behavior: Evidence suggests that Triceratops may have lived in herds, providing protection from predators.</li>
+            <li>Horn usage: The three facial horns were likely used in defense, combat, and possibly in mating displays.</li>
+        </ol>
+
+        <div class="download-section">
+            <h2>Download a Picture of Triceratops</h2>
+            <p>Click the button below to download a high-quality image of a Triceratops.</p>
+            <a href="images/Triceratops.jpg" download>Download Triceratops Image</a>
+        </div>
+        
+        <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Dinosaur World. All rights reserved by Blizzard238.</p>
+    </footer>
+
+    <script>
+        // Page Scroll to Top Button
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Download Confirmation
+        document.querySelector('.download-section a').addEventListener('click', function(event) {
+            if (!confirm('Are you sure you want to download this image?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

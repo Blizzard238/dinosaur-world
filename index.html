@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the World of Dinosaurs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8eaf6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3949ab;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .dino-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+        .dino-table th, .dino-table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+        .dino-table th {
+            background-color: #3949ab;
+            color: white;
+        }
+        .dino-table td a {
+            color: #3949ab;
+            text-decoration: none;
+        }
+        .dino-table td a:hover {
+            text-decoration: underline;
+        }
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .download-section a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3949ab;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .download-section a:hover {
+            background-color: #5c6bc0;
+        }
+        footer {
+            background-color: #3949ab;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 20px 0;
+            padding-left: 40px;
+        }
+        ol {
+            margin: 20px 0;
+            padding-left: 40px;
+        }
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3949ab;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        #scrollToTopBtn:hover {
+            background-color: #5c6bc0;
+        }
+        /**#backButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #3949ab;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #backButton:hover {
+            background-color: #5c6bc0;
+        }**/
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Explore the World of Dinosaurs</h1>
+    <p>Delve into the fascinating world of these ancient creatures.</p>
+</header>
+
+<div class="content">
+    <h2>Introduction to Dinosaurs</h2>
+    <p>Dinosaurs were a diverse group of reptiles of the clade Dinosauria that appeared during the Mesozoic era, approximately 230 million years ago. They were the dominant terrestrial vertebrates for over 160 million years, from the Triassic period through the Jurassic and into the Cretaceous, until their extinction at the end of the Cretaceous period, around 66 million years ago.</p>
+
+    <p>These ancient creatures came in a variety of shapes and sizes, with some being the largest animals to have ever walked the Earth. While most dinosaurs are known from fossilized bones, they also left behind footprints, eggs, and even traces of skin and feathers, providing a fascinating glimpse into their lives.</p>
+
+    <p>The dinosaurs we commonly know today are divided into two main groups based on their hip structure: Saurischia and Ornithischia. Saurischians include the mighty carnivores like Tyrannosaurus Rex and the massive herbivores like Brachiosaurus. Ornithischians include a variety of herbivorous dinosaurs like Triceratops and Stegosaurus, many of which had unique features like horns, frills, and armored plates.</p>
+
+    <table class="dino-table">
+        <tr>
+            <th>Dinosaur Name</th>
+            <th>Period</th>
+            <th>Diet</th>
+            <th>More Information</th>
+        </tr>
+        <tr>
+            <td>Tyrannosaurus Rex</td>
+            <td>Cretaceous</td>
+            <td>Carnivore</td>
+            <td><a href="trex.html" target="_self">Learn more</a></td>
+        </tr>
+        <tr>
+            <td>Triceratops</td>
+            <td>Cretaceous</td>
+            <td>Herbivore</td>
+            <td><a href="triceratops.html" target="_self">Learn more</a></td>
+        </tr>
+        <tr>
+            <td>Stegosaurus</td>
+            <td>Jurassic</td>
+            <td>Herbivore</td>
+            <td><a href="stegosaurus.html" target="_self">Learn more</a></td>
+        </tr>
+        <tr>
+            <td>Velociraptor</td>
+            <td>Cretaceous</td>
+            <td>Carnivore</td>
+            <td><a href="velociraptor.html" target="_self">Learn more</a></td>
+        </tr>
+    </table>
+
+    <div class="download-section">
+        <h2>Download Dinosaur Images</h2>
+        <p>Explore the fascinating world of dinosaurs by downloading high-quality images.</p>
+        <a href="images/Tyrannosaurus Rex.jpg" download>Download T-Rex Image</a>
+        <a href="images/Triceratops.jpg" download style="margin-left: 10px;">Download Triceratops Image</a>
+        <a href="images/Stegosaurus.jpg" download style="margin-left: 10px;">Download Stegosaurus Image</a>
+        <a href="images/Velociraptor.jpg" download style="margin-left: 10px;">Download Velociraptor Image</a>
+    </div>
+    
+    <!--<button id="backButton" onclick="goBack()">Back to Previous Page</button>-->
+    <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+</div>
+
+<footer>
+    <p>&copy; 2024 Dinosaur World. All rights reserved by Blizzard238.</p>
+</footer>
+
+<script>
+    // Page Scroll to Top Button
+    var mybutton = document.getElementById("scrollToTopBtn");
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    };
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    // Navigation History
+    /**function goBack() {
+        window.history.back();
+    }**/
+
+    // Download Confirmation
+    document.querySelectorAll('.download-section a').forEach(link => {
+        link.addEventListener('click', function(event) {
+            if (!confirm('Are you sure you want to download this image?')) {
+                event.preventDefault();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

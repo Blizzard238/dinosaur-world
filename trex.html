@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyrannosaurus Rex</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8eaf6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+        .dino-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+        .dino-table th, .dino-table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+        .dino-table th {
+            background-color: #3949ab;
+            color: white;
+        }
+        .dino-table td {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .download-section a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3949ab;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .download-section a:hover {
+            background-color: #5c6bc0;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 20px 0;
+            padding-left: 40px;
+            text-align: left;
+        }
+        ol {
+            margin: 20px 0;
+            padding-left: 40px;
+            text-align: left;
+        }
+        footer {
+            background-color: #3949ab;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3949ab;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        #scrollToTopBtn:hover {
+            background-color: #5c6bc0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Tyrannosaurus Rex</h1>
+        <p>The Tyrannosaurus Rex, often referred to as T. rex, is one of the most famous dinosaurs. Known for its massive size, powerful jaws, and sharp teeth, the T. rex was a formidable predator that roamed North America during the late Cretaceous period, approximately 68 to 66 million years ago. Standing over 12 feet tall and 40 feet long, the T. rex was one of the largest land predators ever to have lived.</p>
+
+        <img src="images/Tyrannosaurus Rex.jpg" alt="Tyrannosaurus Rex">
+
+        <p>While its fearsome appearance is often highlighted, recent studies suggest that the T. rex may have also been a scavenger, using its keen sense of smell to locate carcasses. Its short arms, though seemingly disproportionate, were incredibly strong and likely played a role in hunting or mating.</p>
+
+        <p>Here are some key facts about the Tyrannosaurus Rex:</p>
+        <ul>
+            <li><strong>Length:</strong> Approximately 40 feet (12 meters)</li>
+            <li><strong>Height:</strong> About 12 feet (3.7 meters) at the hips</li>
+            <li><strong>Weight:</strong> Up to 9 tons (8,160 kilograms)</li>
+            <li><strong>Diet:</strong> Carnivorous, primarily feeding on large herbivores</li>
+            <li><strong>Location:</strong> Fossils found in North America</li>
+        </ul>
+
+        <h2>Behavior and Habitat</h2>
+        <p>The T. rex is believed to have lived in a variety of habitats, including forests, river valleys, and coastal regions. Its strong legs and large feet suggest it was a capable runner, able to chase down prey with significant speed for its size. The exact speed of T. rex is debated, but estimates range from 10 to 25 miles per hour.</p>
+
+        <ol>
+            <li>Powerful bite: The T. rex had a bite force estimated at over 12,000 pounds, making it one of the most powerful bites of any terrestrial animal.</li>
+            <li>Sense of smell: The large olfactory bulbs in its brain suggest it had an excellent sense of smell, which was likely used for hunting and scavenging.</li>
+            <li>Strong arms: Despite their size, the T. rex's arms were extremely muscular, with some theories suggesting they were used to hold onto prey.</li>
+        </ol>
+
+        <div class="download-section">
+            <h2>Download a Picture of Tyrannosaurus Rex</h2>
+            <p>Click the button below to download a high-quality image of a Tyrannosaurus Rex.</p>
+            <a href="images/Tyrannosaurus Rex.jpg" download>Download T-Rex Image</a>
+        </div>
+        
+        <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Dinosaur World. All rights reserved by Blizzard238.</p>
+    </footer>
+
+    <script>
+        // Page Scroll to Top Button
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Download Confirmation
+        document.querySelector('.download-section a').addEventListener('click', function(event) {
+            if (!confirm('Are you sure you want to download this image?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

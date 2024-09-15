@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velociraptor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8eaf6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+        .dino-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+        .dino-table th, .dino-table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+        .dino-table th {
+            background-color: #3949ab;
+            color: white;
+        }
+        .dino-table td {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .download-section a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3949ab;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .download-section a:hover {
+            background-color: #5c6bc0;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 20px 0;
+            padding-left: 40px;
+            text-align: left;
+        }
+        ol {
+            margin: 20px 0;
+            padding-left: 40px;
+            text-align: left;
+        }
+        footer {
+            background-color: #3949ab;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3949ab;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        #scrollToTopBtn:hover {
+            background-color: #5c6bc0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <h1>Velociraptor</h1>
+    <p>The Velociraptor, often depicted as a cunning and agile predator, lived during the late Cretaceous period, around 75 to 71 million years ago. The name "Velociraptor" means "swift thief," highlighting its speed and hunting abilities. Unlike its portrayal in popular media, Velociraptor was relatively small, standing about 3 feet tall and measuring about 6 to 7 feet in length.</p>
+
+    <img src="images/velociraptor.jpg" alt="Velociraptor">
+
+    <p>Velociraptors were likely covered in feathers, similar to modern birds, and had a long, stiffened tail that helped them maintain balance while running. They were highly intelligent for dinosaurs, with a large brain relative to their size, and they likely hunted in packs, making them formidable predators despite their small size.</p>
+
+    <p>Here are some key facts about Velociraptor:</p>
+    <ul>
+        <li><strong>Length:</strong> Approximately 6 to 7 feet (1.8 to 2.1 meters)</li>
+        <li><strong>Height:</strong> About 3 feet (0.9 meters)</li>
+        <li><strong>Weight:</strong> Up to 33 pounds (15 kilograms)</li>
+        <li><strong>Diet:</strong> Carnivorous, feeding on small to medium-sized animals</li>
+        <li><strong>Location:</strong> Fossils found in Mongolia and northern China</li>
+    </ul>
+
+    <h2>Behavior and Habitat</h2>
+    <p>Velociraptors likely lived in arid desert regions, where they used their speed and intelligence to hunt down prey. Their sharp, curved claws were used to grasp and subdue their victims, and they may have used coordinated pack tactics to bring down larger animals.</p>
+
+    <ol>
+        <li>Feathered body: Velociraptor is believed to have had feathers, making it more bird-like than the scaly reptiles often depicted in movies.</li>
+        <li>Pack hunting: Evidence suggests that Velociraptors may have hunted in groups, using their intelligence and coordination to take down prey.</li>
+        <li>Curved claw: Velociraptors had a large, sickle-shaped claw on each foot, which was likely used as a weapon during hunting.</li>
+    </ol>
+
+    <div class="download-section">
+        <h2>Download a Picture of Velociraptor</h2>
+        <p>Click the button below to download a high-quality image of a Velociraptor.</p>
+        <a href="images/velociraptor.jpg" download>Download Velociraptor Image</a>
+    </div>
+    
+    <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+</div>
+
+<footer>
+    <p>&copy; 2024 Dinosaur World. All rights reserved by Blizzard238.</p>
+</footer>
+
+<script>
+    // Page Scroll to Top Button
+    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+    // Download Confirmation
+    document.querySelector('.download-section a').addEventListener('click', function(event) {
+        if (!confirm('Are you sure you want to download this image?')) {
+            event.preventDefault();
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stegosaurus</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e8eaf6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      .content {
+        padding: 20px;
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+      }
+      .dino-table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+        background-color: #ffffff;
+      }
+      .dino-table th,
+      .dino-table td {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: left;
+      }
+      .dino-table th {
+        background-color: #3949ab;
+        color: white;
+      }
+      .dino-table td {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+      }
+      .download-section {
+        text-align: center;
+        margin: 40px 0;
+      }
+      .download-section a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #3949ab;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+      .download-section a:hover {
+        background-color: #5c6bc0;
+      }
+      ul {
+        list-style-type: disc;
+        margin: 20px 0;
+        padding-left: 40px;
+        text-align: left;
+      }
+      ol {
+        margin: 20px 0;
+        padding-left: 40px;
+        text-align: left;
+      }
+      footer {
+        background-color: #3949ab;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+      }
+      #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #3949ab;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+      #scrollToTopBtn:hover {
+        background-color: #5c6bc0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Stegosaurus</h1>
+      <p>
+        The Stegosaurus is one of the most recognizable dinosaurs, known for its
+        distinctive back plates and spiked tail. This herbivorous dinosaur lived
+        during the late Jurassic period, around 155 to 150 million years ago,
+        primarily in what is now North America. The name "Stegosaurus" means
+        "roofed lizard," referring to the bony plates that ran along its back.
+      </p>
+
+      <img src="images/stegosaurus.jpg" alt="Stegosaurus" />
+
+      <p>
+        Stegosaurus had a unique body structure, with a small head, bulky body,
+        and a long tail armed with spikes known as the "thagomizer." These
+        features made it well-adapted to its environment, where it likely used
+        its plates for display and its tail spikes for defense.
+      </p>
+
+      <p>Here are some key facts about Stegosaurus:</p>
+      <ul>
+        <li><strong>Length:</strong> Approximately 30 feet (9 meters)</li>
+        <li><strong>Height:</strong> About 14 feet (4.3 meters) at the hips</li>
+        <li><strong>Weight:</strong> Up to 5 tons (4,536 kilograms)</li>
+        <li>
+          <strong>Diet:</strong> Herbivorous, primarily feeding on low-lying
+          plants like ferns and cycads
+        </li>
+        <li>
+          <strong>Location:</strong> Fossils found in North America,
+          particularly in the western United States
+        </li>
+      </ul>
+
+      <h2>Behavior and Habitat</h2>
+      <p>
+        Stegosaurus likely lived in herds, using its distinctive plates and tail
+        spikes for defense against predators like Allosaurus. The function of
+        its plates has been the subject of much debate, with theories suggesting
+        they were used for thermoregulation, display, or species recognition.
+      </p>
+
+      <ol>
+        <li>
+          Back plates: The Stegosaurus had 17 bony plates along its back, which
+          may have been used for display or temperature regulation.
+        </li>
+        <li>
+          Spiked tail: The "thagomizer" consisted of four long spikes that the
+          Stegosaurus could swing with great force to defend itself.
+        </li>
+        <li>
+          Small brain: Despite its large body, the Stegosaurus had a relatively
+          small brain, about the size of a walnut.
+        </li>
+      </ol>
+
+      <div class="download-section">
+        <h2>Download a Picture of Stegosaurus</h2>
+        <p>
+          Click the button below to download a high-quality image of a
+          Stegosaurus.
+        </p>
+        <a href="images/stegosaurus.jpg" download>Download Stegosaurus Image</a>
+      </div>
+      
+      <button id="scrollToTopBtn" onclick="scrollToTop()">Top</button>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Dinosaur World. All rights reserved by Blizzard238.</p>
+    </footer>
+
+    <script>
+      // Page Scroll to Top Button
+      var mybutton = document.getElementById("scrollToTopBtn");
+      window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      };
+      function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+      // Download Confirmation
+      document.querySelector('.download-section a').addEventListener('click', function(event) {
+        if (!confirm('Are you sure you want to download this image?')) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </body>
+</html>
